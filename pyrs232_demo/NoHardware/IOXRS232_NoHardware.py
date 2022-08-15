@@ -3,9 +3,6 @@ import IOXRS232_NoHardwareLib
 # Contact Solutions Engineering to receive device Id for specific application
 deviceId = 4204
 
-# Contact Solutions Engineering to receive device Id for specific application
-deviceId = 4204
-
 # Sending Handshake
 IOXRS232_NoHardwareLib.handshake(deviceId)
 
