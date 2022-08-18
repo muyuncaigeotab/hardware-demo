@@ -77,7 +77,7 @@ def handshake(serialPort, deviceId):
     # sending handshake response
     print("sending handshake response")
     handshakeResponse = createMessage(
-        bytes([0x81, 4, deviceId % 256, (deviceId >> 8) % 256, ACK_request*2 + wrap, 0]))
+        bytes([0x81, 4, deviceId % 256, (deviceId >> 8) % 256, wrap*2 + ACK_request, 0]))
     serialPort.write(handshakeResponse)
     print([hex(b) for b in handshakeResponse])
     print()
