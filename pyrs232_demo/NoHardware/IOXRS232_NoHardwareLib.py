@@ -361,7 +361,7 @@ def sendMIMEData():
         " " + " ".join(map(hexStringFormatter, MIMEType)) + \
         ", [Payload Length], [Payload 1], [Checksum], '0x03']"
         print("Sending first payload")
-        print(firstPacket)
+        print(firstPacket, "\n")
         time.sleep(1)
         
         print("Reading device ACK")
