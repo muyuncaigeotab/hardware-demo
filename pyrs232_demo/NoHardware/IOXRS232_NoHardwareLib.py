@@ -63,7 +63,7 @@ def handshake(deviceId):
     time.sleep(1)
     print("sending handshake response")
     handshakeResponse = createMessage(
-        bytes([0x81, 4, deviceId % 256, (deviceId >> 8) % 256, ACK_request*2 + wrap, 0]))
+        bytes([0x81, 4, deviceId % 256, (deviceId >> 8) % 256, wrap*2 + ACK_request, 0]))
     print([hex(b) for b in handshakeResponse], "\n")
     time.sleep(1)
     if(ACK_request == 1):
